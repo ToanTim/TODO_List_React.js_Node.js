@@ -1,0 +1,51 @@
+.Header {
+  position: relative;
+  background-color: white;
+  height: 100vh;
+}
+/* position: relative; */
+.HeaderImage {
+  position: absolute;
+  right: 0;
+  bottom: 15%;
+  max-width: 60%;
+  height: auto;
+}
+
+.HeaderTexts {
+  position: absolute;
+  top: 20%;
+  left: 11%;
+  text-align: left;
+  max-width: 550px;
+}
+.HeaderHeading {
+  font-size: 58px;
+}
+
+.HeaderSubtitle {
+  font-size: 32px;
+}
+
+@media only screen and (max-width: 1024px) {
+}
+
+@media only screen and (max-width: 839px) {
+}
+
+@media only screen and (max-width: 670px) {
+  .HeaderHeading {
+    font-size: 40px;
+  }
+
+  .HeaderSubtitle {
+    font-size: 22px;
+  }
+
+  .HeaderTexts {
+    left: 5%;
+  }
+}
+
+@media only screen and (max-width: 375px) {
+}

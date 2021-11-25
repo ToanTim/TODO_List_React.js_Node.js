@@ -1,0 +1,26 @@
+.Header {
+  position: relative;
+  background-color: #b8f7dd;
+  height: 100vh;
+}
+
+.HeaderImage {
+  position: absolute;
+  right: 0;
+  bottom: 0px;
+}
+
+.HeaderTexts {
+  position: absolute;
+  top: 20%;
+  left: 11%;
+  text-align: left;
+  max-width: 550px;
+}
+.HeaderHeading {
+  font-size: 58px;
+}
+
+.HeaderSubtitle {
+  font-size: 32px;
+}

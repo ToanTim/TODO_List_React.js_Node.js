@@ -1,0 +1,138 @@
+.Navbar {
+  background-color: #021e39;
+  width: 100%;
+  height: 80px;
+  display: flex;
+}
+
+.Navbar .LeftSide {
+  flex: 50%;
+  display: flex;
+  background-color: white;
+  justify-content: left;
+  align-items: center;
+}
+
+.Navbar .LeftSide .Link {
+  max-height: 80px;
+}
+
+.Navbar .LeftSide .Link a {
+  max-height: 80px;
+  text-decoration: none;
+  color: black;
+  font-size: 25px;
+  margin-left: 15px;
+  font-weight: bold;
+}
+
+.Navbar .LeftSide button {
+  display: none;
+}
+.Navbar .LeftSide #hidden {
+  display: flex;
+  margin-left: 20px;
+}
+/* #021e39 */
+.Navbar .RightSide {
+  flex: 50%;
+  background-color: white;
+  display: flex;
+  align-items: center;
+  justify-content: right;
+  padding-right: 25px;
+}
+
+.Navbar .RightSide a {
+  width: 5%;
+  height: auto;
+}
+
+.Navbar .RightSide img {
+  top: -60px;
+  position: absolute;
+  left: 0px;
+  width: 12%;
+  height: auto;
+}
+
+.RightSide input {
+  width: 220px;
+  height: 30px;
+  border: none;
+  border-radius: 4px;
+  font-size: 20px;
+  padding-left: 15px;
+  color: back;
+}
+
+.RightSide button {
+  height: 32px;
+  width: 70px;
+  font-size: 16px;
+}
+
+button:hover {
+  cursor: pointer;
+}
+
+@media only screen and (max-width: 1605px) {
+  .Navbar .RightSide img {
+    top: -30px;
+  }
+}
+
+@media only screen and (max-width: 1088px) {
+  .Navbar .LeftSide .Link a {
+    font-size: 20px;
+  }
+}
+
+@media only screen and (max-width: 839px) {
+  .Navbar .LeftSide .Link a {
+    font-size: 15px;
+  }
+
+  .Navbar .LeftSide .button {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 670px) {
+  .Navbar .LeftSide button {
+    display: flex;
+    margin-left: 20px;
+  }
+
+  .Navbar .LeftSide .Link {
+    display: none;
+  }
+
+  .Navbar .LeftSide #hidden {
+    position: absolute;
+    left: 0px;
+    top: 80px;
+    max-height: 230px;
+    width: 100%;
+    background: white;
+    margin-left: 0px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .Navbar .LeftSide #hidden a {
+    margin: 10px;
+  }
+}
+
+@media only screen and (max-width: 375px) {
+  .Navbar .RightSide button {
+    display: none;
+    margin-left: 0px;
+  }
+
+  .Navbar .LeftSide button {
+    margin-left: 5px;
+  }
+}
