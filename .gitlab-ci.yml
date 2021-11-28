@@ -1,0 +1,64 @@
+variables:
+  REMOTE_HOST: deploy@21wsp9
+  API_IMAGE: ${CI_REGISTRY_IMAGE}/backend
+  WEBAPP_IMAGE: ${CI_REGISTRY_IMAGE}/frontend
+
+stages:
+  - test
+  - build
+  - deploy
+
+test:
+  image: node:latest
+  stage: test
+  script:
+    # Go to api directory
+    - cd backend
+    # Run npm commands
+    - npm install && npm test #&& npm audit
+    # Go to frontend directory
+    - cd ../frontend
+    # Remove package-lock.json because of a bug
+    # (https://stackoverflow.com/questions/63321707/react-npm-install-fails)
+    - rm package-lock.json
+    # Run npm commands
+    - npm install && npm test #&& npm audit
+
+build:
+  image: docker:latest
+  stage: build
+  services:
+    - docker:dind
+  script:
+    - docker login -u gitlab-ci-token -p "${CI_JOB_TOKEN}" "${CI_REGISTRY}"
+    # Build & push API
+    - docker build -f backend/DockerfileServer -t "${API_IMAGE}" .
+    - docker push "${API_IMAGE}"
+    # Build & push Webapp
+    - docker build -f frontend/DockerfileServer -t "${WEBAPP_IMAGE}" .
+    - docker push "${WEBAPP_IMAGE}"
+
+deploy:
+  image: alpine:latest
+  stage: deploy
+  script:
+    - apk update && apk add rsync openssh curl
+    # Prepare SSH settings
+    - mkdir -p ~/.ssh && (umask  077 ; echo "${DEPLOY_KEY_PRIVATE}" | base64 -d > ~/.ssh/id_rsa)
+    - echo -e "Host *\n\tStrictHostKeyChecking no\n\n" > ~/.ssh/config
+    # Prepare files for transfer
+    - mkdir remote_dir_pw
+    - cp docker-compose.server.yml remote_dir_pw/docker-compose.yml
+    - echo "API_IMAGE=${API_IMAGE}" >> remote_dir_pw/.env
+    - echo "WEBAPP_IMAGE=${WEBAPP_IMAGE}" >> remote_dir_pw/.env
+    # Transfer to server
+    - rsync -r remote_dir_pw "${REMOTE_HOST}:./"
+    # Run commands on the server
+    - ssh ${REMOTE_HOST} /bin/bash 
+            "
+            echo 'Starting..';
+            cd ~/remote_dir_pw;
+            docker login -u gitlab-ci-token -p $CI_JOB_TOKEN $CI_REGISTRY;
+            docker-compose pull;
+            docker-compose up -d;
+            "
