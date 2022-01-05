@@ -1,18 +1,1 @@
-[
-  { "id": 1, "Task": "Do task 1" },
-  { "id": 2, "Task": "Do task 2" },
-  { "id": 3, "Task": "Do task 3" },
-  { "id": 4, "Task": "Do task 4" },
-  { "id": 5, "Task": "Do task 5" },
-  { "id": 6, "Task": "Do task 6" },
-  { "id": 7, "Task": "Do task 7" },
-  { "id": 8, "Task": "Do task 8" },
-  { "id": 9, "Task": "Do task 9" },
-  { "id": 10, "Task": "Do task 10" },
-  { "id": 11, "Task": "Do task 11" },
-  { "id": 12, "Task": "Do task 12" },
-  { "id": 13, "Task": "Do task 13" },
-  { "id": 11, "Task": "9999999999999" },
-  { "id": 11, "Task": "9999999999999" },
-  { "id": 11, "Task": "fggwrggrr" }
-]
+[{"user_id":"0d59e66e-30f3-4a54-9d68-d5b90f47bf47","task":{"task_id":"done-e988769d-4564-4341-8d55-e2c833fbf536","task_name":"adsfvadvadv","task_content":"solution mentioned above to remove the git credentials from windows credentials manager works. Basically it would have sourced with other git credentials in the cache. Flushing out the old ones would pave way to override the new credentials. solution mentioned above to remove the git credentials from windows credentials manager works. Basically it would have sourced with other git credentials in the cache. Flushing out the old ones would pave way to override the new credentials.","task_date":1640321222280}},{"user_id":"0d59e66e-30f3-4a54-9d68-d5b90f47bf47","task":{"task_id":"a60134f1-5c09-4883-aa0f-d4b156363bc9","task_name":"wewd","task_content":"no descriptionvsv","task_date":1640550264042}},{"user_id":"0d59e66e-30f3-4a54-9d68-d5b90f47bf47","task":{"task_id":"9123fe7b-62a7-432b-a60d-adf525b79124","task_name":"vsdvs ","task_content":"no description","task_date":1640550689369}},{"user_id":"0d59e66e-30f3-4a54-9d68-d5b90f47bf47","task":{"task_id":"2ba064e0-794f-4f23-9a22-f223500de577","task_name":"gdfgdfvbdfb","task_content":"no description","task_date":1640639862900}},{"user_id":"0d59e66e-30f3-4a54-9d68-d5b90f47bf47","task":{"task_id":"103988a2-5ddf-4648-8ebe-e01192a2bf30","task_name":"svsvsdv","task_content":"dvsdvs","task_date":1640649607193}}]

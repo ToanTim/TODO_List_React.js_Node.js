@@ -1,6 +1,6 @@
 .Header {
   position: relative;
-  background-color: white;
+  background-color: rgb(255, 255, 255);
   height: 100vh;
 }
 /* position: relative; */
@@ -44,6 +44,18 @@
 
   .HeaderTexts {
     left: 5%;
+  }
+
+  .Header {
+    top: 180px;
+  }
+
+  .HeaderImage {
+    bottom: 30%;
+  }
+
+  .HeaderTexts {
+    top: 10%;
   }
 }
 

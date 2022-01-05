@@ -1,15 +1,15 @@
-version: '2.4'
+version: "2.4"
 
 services:
   frontend:
-    image: ${WEBAPP_IMAGE}
-    ports: 
-      - "8080:5000"
-    env_file: 
+    image: ${FRONTEND_IMAGE}
+    ports:
+      - "8080:3000"
+    env_file:
       - .env
     restart: always
   backend:
-    image: ${API_IMAGE}
+    image: ${BACKEND_IMAGE}
     ports:
       - "4040:5000"
     env_file:

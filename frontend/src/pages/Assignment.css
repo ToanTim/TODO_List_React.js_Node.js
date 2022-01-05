@@ -1,18 +1,153 @@
 .container {
+  background-image: url("../assets/images/naturepicture.jpg");
+  background-size: cover;
+  position: relative;
   width: screen;
   display: flex;
-  justify-content: center;
   height: 100vh;
-  justify-items: center;
   flex-direction: column;
-}
-
-.container input {
-  width: 100%;
-  height: 30px;
+  background-color: rgb(255, 255, 255);
 }
 
 .container button {
-  width: 100%;
-  height: 30px;
+  left: 10px;
+  position: absolute;
+  height: 50px;
+  width: 100px;
+  border: 1px solid;
+  top: 10%;
+  border-radius: 20px;
+  background-color: #e7f7c3;
+}
+
+.taskTable {
+  border: none;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  left: 15%;
+  top: 15%;
+  position: absolute;
+  background-color: rgba(red, green, blue, alpha);
+  height: 70%;
+  width: 70%;
+  /* scroll bar */
+  overflow: hidden;
+  border-color: #7500d1;
+}
+
+.taskTable::-webkit-scrollbar {
+  width: 10px;
+}
+.taskTable::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 10px;
+}
+.taskTable::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 10px;
+}
+.taskTable::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+.taskTable:hover {
+  overflow-y: scroll;
+}
+
+.addTaskPopUp {
+  border-radius: 20px;
+  border: 1px solid;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  height: 30%;
+  width: 50%;
+  margin-top: 10%;
+  margin-left: 25%;
+  background-color: rgb(255, 255, 255);
+}
+
+.removeTaskPopUp {
+  display: none;
+}
+
+.addTaskPopUp input {
+  width: 99%;
+  margin-top: 10px;
+  border-radius: 15px;
+  height: 20%;
+}
+
+.addTaskPopUp button {
+  position: absolute;
+  top: 80%;
+  left: 60%;
+}
+
+.addTaskPopUp h1 {
+  text-align: center;
+}
+
+.taskBarCheckDelete {
+  border-radius: 20px;
+  border: 1px solid;
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  height: 30%;
+  width: 50%;
+  margin-top: 10%;
+  margin-left: 25%;
+  background-color: rgb(255, 255, 255);
+}
+
+.addTaskPopUp h1 {
+  font-size: 20px;
+}
+
+@media only screen and (max-width: 1441px) {
+  .container button {
+    height: 40px;
+    width: 100px;
+  }
+
+  .addTaskPopUp h1 {
+    font-size: 20px;
+  }
+}
+
+@media only screen and (max-width: 1025px) {
+  .container button {
+    height: 40px;
+    width: 60px;
+  }
+
+  .addTaskPopUp h1 {
+    font-size: 20px; 
+
+  }
+}
+
+@media only screen and (max-width: 426px) {
+  .container button {
+    height: 20px;
+    font-size: 10px;
+    width: 60px;
+  }
+
+  .addTaskPopUp h1 {
+    font-size: 20px;
+  }  
+
+  .addTaskPopUp {
+    height: 30%;
+    width: 70%;
+    margin-top: 30%;  
+    margin-left: 15%;
+  }
+
+  .addTaskPopUp input {
+    width: 98%;
+  }
 }

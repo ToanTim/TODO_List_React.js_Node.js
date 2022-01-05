@@ -7,11 +7,6 @@ const SwiperSlideComponent = ({
   subText1,
   subText2,
 }) => {
-  const text = "Share your stories, we are here to listen";
-  const text1 =
-    "Sometime, life is just hard, and some days are just rough... And sometime you just gotta cry before you can move forward...";
-  const text2 =
-    "In here, where you can cry, be angry, be sad, you want to share a story but you don't know who to share with, then you are in the right place";
   return (
     <header className="Header">
       <img className="HeaderImage" src={SwiperImage} alt="headerImage" />

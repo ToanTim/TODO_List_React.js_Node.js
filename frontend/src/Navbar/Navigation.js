@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import "./Navigation.css";
 import ReorderIcon from "@material-ui/icons/Reorder";
-import SearchIcon from "@material-ui/icons/Search";
 import LogoImage from "../assets/images/Logo1.png";
+
 const Navbar = () => {
   const [showmenu, setShowmenu] = useState(false);
 
@@ -11,6 +11,7 @@ const Navbar = () => {
   // <button>
   //   <SearchIcon />
   // </button>
+  // cant make bootstrap work 
   return (
     <div className="Navbar">
       <div className="RightSide">

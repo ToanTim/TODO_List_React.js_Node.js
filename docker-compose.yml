@@ -1,20 +1,20 @@
-version: '2.3'
-services: 
+version: "2.3"
+services:
   frontend:
     build:
       context: ./frontend
     ports:
-      - '3050:3000'
-    volumes: 
+      - "3000:3000"
+    volumes:
       - ./frontend:/opt/app
-    environment: 
-      CI: 'true'
+    environment:
+      CI: "true"
     restart: always
   backend:
-    build: 
+    build:
       context: ./backend
-    ports: 
-      - '5050:5000'
-    volumes: 
+    ports:
+      - "8050:5000"
+    volumes:
       - ./backend:/opt/app
-    restart: always 
+    restart: always
