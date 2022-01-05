@@ -1,0 +1,11 @@
+.grid-container{
+    display: grid;
+    grid-template-columns: auto auto;
+    padding: 10px;
+    grid-gap: 50px;
+}
+.grid-item{
+    background-color: aliceblue;
+    font-size: 30px;
+    text-align: center;
+}

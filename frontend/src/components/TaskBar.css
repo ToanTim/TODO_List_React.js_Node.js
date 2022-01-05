@@ -1,0 +1,40 @@
+.TaskBar {
+  background-color: rgb(255, 255, 255);
+  min-height: 90px;
+  width: 98%;
+  border: 1px solid;
+  border-radius: 10px;
+  margin-top: 10px;
+  margin-left: 5px;
+  left: 10px;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.TaskBar:hover {
+  overflow-y: scroll;
+}
+
+.TaskBar::-webkit-scrollbar {
+  width: 10px;
+}
+.TaskBar::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 10px;
+}
+.TaskBar::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 10px;
+}
+.TaskBar::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+.TaskBar h3 {
+  text-align: center;
+  height: 0px;
+}
+
+.TaskBar p {
+  height: 0px;
+  text-align: center;
+}

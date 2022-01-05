@@ -1,0 +1,18 @@
+export function checkDoneTask(id) {
+  return fetch("http://21wsp9pw.course.tamk.cloud/api/v1/task/update/" + id, {
+    method: "PUT",
+    headers: {
+      "Content-Type": "application/json",
+    },
+  })
+    .then((response) => {
+      if (response.status >= 200 && response.status < 300) {
+        return response;
+        console.log(response);
+        window.location.reload();
+      } else {
+        console.log("Somthing happened wrong");
+      }
+    })
+    .catch((err) => err);
+}
